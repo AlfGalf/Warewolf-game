@@ -64,7 +64,6 @@ namespace AlfieRichardsServer
                 else
                 {
                     spa.Options.SourcePath = "ClientApp/build";
-                    spa.UseProxyToSpaDevelopmentServer("start");
                 }
             });
             
