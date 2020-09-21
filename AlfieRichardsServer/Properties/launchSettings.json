@@ -8,17 +8,10 @@
     }
   },
   "profiles": {
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
     "AlfieRichardsServer": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://www.alfierichards.com",
+      "applicationUrl": "https://0.0.0.0:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
