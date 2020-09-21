@@ -61,6 +61,11 @@ namespace AlfieRichardsServer
                     spa.Options.SourcePath = "ClientApp";
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
+                else
+                {
+                    spa.Options.SourcePath = "ClientApp/build";
+                    spa.UseProxyToSpaDevelopmentServer("start");
+                }
             });
             
             // using Microsoft.AspNetCore.HttpOverrides;
