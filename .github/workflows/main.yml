@@ -30,7 +30,7 @@ jobs:
       - name: Stop old server and move it
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: sudo service webserver stop; mv /webserver/current /webserver/old/build-`date +"%Y-%m-%d"`
+          command: sudo service webserver stop; mv /webserver/current /webserver/old/build-`date +%y.%m.%d-%H:%M:%S`
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           password: ${{ secrets.REMOTE_PASSWORD }}
