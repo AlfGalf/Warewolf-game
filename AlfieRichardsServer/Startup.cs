@@ -49,7 +49,7 @@ namespace AlfieRichardsServer
             app.UseSpaStaticFiles(
                 new StaticFileOptions
                 {
-                    RequestPath = "/webserver/current/ClientApp"
+                    RequestPath = "/ClientApp"
                 } );
 
             app.UseRouting();
@@ -68,6 +68,11 @@ namespace AlfieRichardsServer
                 if (env.IsDevelopment())
                 {
                     spa.UseReactDevelopmentServer(npmScript: "start");
+                }
+                else
+                {
+                    spa.UseReactDevelopmentServer(npmScript: "start");
+                    
                 }
             });
             
