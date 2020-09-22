@@ -21,11 +21,11 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v1.6.0
         with:
-          dotnet-version: 3.1
+          dotnet-version: 3.1.x
       - name: Dotnet Publish
-        run: dotnet publish . -c Release -o deploy
+        run: dotnet publish . -o deploy #-c Release -o deploy
       
       - name: Stop old server and move it
         uses: garygrossgarten/github-action-ssh@release
@@ -39,7 +39,7 @@ jobs:
       - name: Copy via ssh
         uses: garygrossgarten/github-action-scp@v0.5.3
         with:
-          local: /home/runner/work/Warewolf-game/Warewolf-game/deploy/
+          local: deploy
           remote: ${{ secrets.REMOTE_TARGET }}
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
