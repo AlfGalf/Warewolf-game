@@ -25,7 +25,7 @@ jobs:
         with:
           dotnet-version: 3.1.x
       - name: Dotnet Publish
-        run: dotnet publish . -c Release -o deploy
+        run: dotnet publish . -o deploy #-c Release -o deploy
       
       - name: Stop old server and move it
         uses: garygrossgarten/github-action-ssh@release
