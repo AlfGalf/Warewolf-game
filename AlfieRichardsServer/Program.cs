@@ -19,13 +19,13 @@ namespace AlfieRichardsServer
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .UseContentRoot(Directory.GetCurrentDirectory())
                 .ConfigureWebHostDefaults(webBuilder => 
                 { 
                     webBuilder.ConfigureKestrel(serverOptions =>
                     {
                         
                     })
+                        .UseContentRoot(Directory.GetCurrentDirectory())
                         .UseStartup<Startup>(); 
                 });
     }
