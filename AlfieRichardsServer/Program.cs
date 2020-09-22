@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
@@ -18,13 +19,14 @@ namespace AlfieRichardsServer
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .ConfigureWebHostDefaults(webBuilder => 
                 { 
                     webBuilder.ConfigureKestrel(serverOptions =>
                     {
                         
                     })
-                    .UseStartup<Startup>(); 
+                        .UseStartup<Startup>(); 
                 });
     }
 }

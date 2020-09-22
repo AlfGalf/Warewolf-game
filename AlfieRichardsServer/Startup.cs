@@ -46,7 +46,7 @@ namespace AlfieRichardsServer
 
             //app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseSpaStaticFiles();
+            // app.UseSpaStaticFiles();
 
             app.UseRouting();
 
