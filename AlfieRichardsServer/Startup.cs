@@ -26,7 +26,7 @@ namespace AlfieRichardsServer
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
-                configuration.RootPath = $"ClientApp/build"; 
+                configuration.RootPath = $"ClientApp"; 
             });
         }
 
@@ -46,11 +46,7 @@ namespace AlfieRichardsServer
 
             //app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseSpaStaticFiles(
-                new StaticFileOptions
-                {
-                    RequestPath = "/webserver/current/ClientApp/build"
-                } );
+            app.UseSpaStaticFiles();
 
             app.UseRouting();
 
