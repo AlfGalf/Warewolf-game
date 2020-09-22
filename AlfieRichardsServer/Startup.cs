@@ -49,7 +49,7 @@ namespace AlfieRichardsServer
             app.UseSpaStaticFiles(
                 new StaticFileOptions
                 {
-                    RequestPath = "/ClientApp/build"
+                    RequestPath = "/webserver/current/ClientApp/build"
                 } );
 
             app.UseRouting();
